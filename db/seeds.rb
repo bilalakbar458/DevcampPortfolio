@@ -55,9 +55,6 @@ end
 end
 puts "5 skills created."
 
-
-
-
 3.times do |technology|
     Portfolio.last.technologies.create!(
         name: "Technology #{technology}"
