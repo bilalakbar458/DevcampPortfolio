@@ -40,6 +40,10 @@ puts "5 skills created."
         thumb_image: "http://via.placeholder.com/350x200"
     )
 end
+
+
+
+
 1.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio title #{portfolio_item}",
@@ -50,3 +54,13 @@ end
     )
 end
 puts "5 skills created."
+
+
+
+
+3.times do |technology|
+    Portfolio.last.technologies.create!(
+        name: "Technology #{technology}"
+    )
+end
+puts "3 technologies created."
