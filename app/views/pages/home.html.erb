@@ -1,4 +1,8 @@
-<h1>Homepage</h1>
+<h1>Hi 
+<% if user_signed_in? %>
+<%=     current_user.first_name %> 
+<% end %>
+</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
 <h1>Blogposts</h1>
@@ -7,3 +11,5 @@
 <% for skill in @skills%>
 <%= skill.title %> <br />
 <%end%>
+
+<%= user_signed_in? %>
